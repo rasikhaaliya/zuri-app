@@ -26,7 +26,7 @@ export default function App() {
       {currentScreen === 'onboarding' && <Onboarding onComplete={() => navigate('dashboard')} />}
       
       {currentScreen !== 'onboarding' && (
-        <div className="flex-1 flex flex-col pb-20">
+        <div className="flex-1 flex flex-col min-h-0 relative">
           {/* Top Header */}
           <header className="absolute top-0 w-full h-16 bg-primary flex items-center justify-between px-6 text-white shadow-lg z-50">
              <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('dashboard')}>
@@ -38,7 +38,7 @@ export default function App() {
           </header>
 
           {/* Main Content Area */}
-          <main className="pt-20 flex-1 overflow-y-auto relative">
+          <main className="pt-20 pb-28 flex-1 overflow-y-auto relative">
              {currentScreen === 'dashboard' && <Dashboard navigate={navigate} />}
              {currentScreen === 'insurance' && <Insurance />}
              {currentScreen === 'health' && <Health />}
@@ -53,7 +53,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ delay: 1 }}
-              className="absolute bottom-20 right-5 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 p-4 rounded-2xl rounded-br-none max-w-[200px] z-[60] pointer-events-none"
+              className="absolute bottom-24 right-5 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 p-4 rounded-2xl rounded-br-none max-w-[200px] z-[60] pointer-events-none"
             >
               <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg pointer-events-auto cursor-pointer">
                 <MessageSquare className="w-5 h-5" />
