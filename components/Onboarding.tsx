@@ -26,7 +26,7 @@ export default function Onboarding({ onComplete }: { onComplete: () => void }) {
   }, [step]);
 
   return (
-    <div className="min-h-screen bg-zuri-bg flex flex-col items-center justify-center p-6 pb-24">
+    <div className="h-full overflow-y-auto bg-zuri-bg flex flex-col items-center justify-center p-6 pb-24">
       <div className="w-full max-w-md mx-auto">
         <AnimatePresence mode="wait">
           {step === 0 && (
